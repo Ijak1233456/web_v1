@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row d-flex align-items-center my-4">
+        <img [src]="userData.imageLink !== null ? userData.imageLink : '/assets/img/default_profile_pic.png'"
+            alt="person" class="img-fluid rounded-circle icon-picture col-3">
+        <span class="col-9 col-sm-9 col-lg-5">{{userData.name}}</span>
+        <div class="col-5 col-lg-4 d-flex align-items-center">
+            <mat-icon class="secondary-color icon-size-small">calendar_today</mat-icon>
+            <span class="secondary-color fs-small">&nbsp;{{userData.date}}</span>
+        </div>
+
+        <div class="col-0 d-sm-none d-md-block d-lg-none d-xl-none d-flex align-items-center">
+            <mat-icon class="secondary-color icon-size-small">schedule</mat-icon>
+            <span class="secondary-color fs-small">&nbsp;{{userData.time}}</span>
+        </div>
+
+        <div class="col-9 d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block my-2">
+            <mat-chip-list>
+                <mat-chip *ngFor="let chip of userData.chips">
+                    {{chip}}
+                </mat-chip>
+            </mat-chip-list>
+        </div>
+        <div class="col-3 d-none d-xs-none d-sm-none d-md-none d-lg-block">
+            <button type="button" class="btn btn-primary my-2">
+                <img src="/assets/img/fb_white.png" alt="fb" class="img-fluid icon pe-3">
+                <span class="pe-2">Share</span>
+                {{shareCount}}
+            </button>
+        </div>
+    </div>
+</div>

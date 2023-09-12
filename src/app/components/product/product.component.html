@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <!-- Check if productList has only one item -->
+        <ng-container *ngIf="productList.length === 1; else multipleItems">
+            <div *ngFor="let item of productList" class="col-12 col-sm-12 col-md-12 col-xl-12 mb-2">
+                <div class="card p-0">
+                    <div class="row h-100">
+                        <div class="col">
+                            <div class="tag w-10 ms-2 mt-2 text-center category">
+                                <p class="my-0 mx-2">{{item.category}}</p>
+                            </div>
+                            <div class="img-container">
+                                <img [src]="item.imageLink" alt="product" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col m-auto">
+                            <div class="content">
+                                <h3>{{item.title}}</h3>
+                                <h4>{{item.description}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-template #multipleItems>
+            <ng-container *ngFor="let item of productList">
+                <div class="col-12 col-sm-12 col-md-6 col-xl-6 mb-2">
+                    <div class="card p-0">
+                          <div class="row h-100">
+                              <div class="col">
+                                  <div class="tag w-10 ms-2 mt-2 text-center category">
+                                      <p class="my-0 mx-2">{{item.category}}</p>
+                                  </div>
+                                  <div class="img-container">
+                                      <img [src]="item.imageLink" alt="product" class="img-fluid">
+                                  </div>
+                              </div>
+                              <div class="col m-auto">
+                                  <div class="content">
+                                      <h3>{{item.title}}</h3>
+                                      <h4>{{item.description}}</h4>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-template>
+    </div>
+</div>

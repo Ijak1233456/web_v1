@@ -1,0 +1,13 @@
+<div class="mb-3">
+    <h4>FOLLOW US</h4>
+    <hr>
+    <div *ngFor="let item of socialMediaList">
+        <img [src]="'/assets/img/'+item.icon+'.png'" [alt]="item.mediaName" class="img-fluid icon py-2 pe-3">
+        <span>{{item.url}}</span>
+    </div>
+    <button type="button" class="btn btn-primary my-2">
+        <img src="/assets/img/fb_white.png" alt="fb" class="img-fluid icon pe-3">
+        <span class="pe-2">Share</span>
+        {{shareCount}}
+    </button>
+</div>

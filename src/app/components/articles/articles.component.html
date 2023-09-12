@@ -1,0 +1,17 @@
+<h4>ARTICLE</h4>
+<hr>
+<div class="row d-flex align-items-center my-4" *ngFor="let item of articleList">
+    <img [src]="item.imageLink !== null ? item.imageLink : '/assets/img/default_profile_pic.png'" alt="person" class="img-fluid rounded-circle icon-picture col-3">
+    <span class="col-9">{{item.name}}</span>
+    <h3 class="col-12 fw-bold mt-2 mb-0">{{item.title}}</h3>
+    <h4 class="col-12 mt-0 mb-2">{{item.description}}</h4>
+    <div class="col-3 tag primary-color text-center">{{item.category}}</div>
+    <div class="col-5 d-flex align-items-center">
+        <mat-icon class="secondary-color icon-size-small">calendar_today</mat-icon>
+        <span class="secondary-color fs-small">&nbsp;{{item.date}}</span>
+    </div>
+    <div class="col-4 d-flex align-items-center">
+        <mat-icon class="secondary-color icon-size-small">schedule</mat-icon>
+        <span class="secondary-color fs-small">&nbsp;{{item.time}}</span>
+    </div>
+</div>

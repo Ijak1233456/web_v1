@@ -1,0 +1,56 @@
+<ng-container *ngIf="recommendationList">
+    <div class="row p-3">
+        <ng-container *ngIf="recommendationList.length === 1; else multipleItems">
+            <ng-container *ngFor="let recommendation of recommendationList">
+                <div class="card col-12">
+                    <img src="/assets/img/restaurant_1.jpg" class="card-img-top" alt="cellar">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-8">
+                                <h4 class="card-title m-0 fw-bold primary-color">{{recommendation.name}}</h4>
+                                <h5 class="card-subtitle mb-2 text-body-secondary">{{recommendation.location}}</h5>
+                            </div>
+                            <div class="col-4 primary-color d-flex align-items-center h-50">
+                                <mat-icon id="star">star</mat-icon>
+                                <span>{{recommendation.rate}}&nbsp;</span>
+                                <span [ngStyle]="{'color': '#9FA9AD'}">({{recommendation.totalReactions}})</span>
+                            </div>
+                        </div>
+                        <h3 class="card-text fw-bold">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</h3>
+                        <div align="end">
+                            <span class="fw-bold">{{recommendation.currency}}{{recommendation.price}}&nbsp;</span>
+                            <span>Anointed</span>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+        <ng-template #multipleItems>
+            <ng-container *ngFor="let recommendation of recommendationList">
+                <div class="card-padding col-4">
+                    <div class="card">
+                      <img src="/assets/img/restaurant_1.jpg" class="card-img-top" alt="cellar">
+                      <div class="card-body">
+                          <div class="row">
+                              <div class="col-8">
+                                  <h4 class="card-title m-0 fw-bold primary-color">{{recommendation.name}}</h4>
+                                  <h5 class="card-subtitle mb-2 text-body-secondary">{{recommendation.location}}</h5>
+                              </div>
+                              <div class="col-4 primary-color d-flex align-items-center h-50">
+                                  <mat-icon id="star">star</mat-icon>
+                                  <span>{{recommendation.rate}}&nbsp;</span>
+                                  <span [ngStyle]="{'color': '#9FA9AD'}">({{recommendation.totalReactions}})</span>
+                              </div>
+                          </div>
+                          <h3 class="card-text fw-bold">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</h3>
+                          <div align="end">
+                              <span class="fw-bold">{{recommendation.currency}}{{recommendation.price}}&nbsp;</span>
+                              <span>Anointed</span>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-template>
+    </div>
+</ng-container>

@@ -1,0 +1,65 @@
+// .card {
+//   border: 1px solid #d7dbe758;
+//   border-radius: 15px;
+//   padding: 10px;
+//   box-shadow: 0px 4px 5px #38426909;
+//   height: 20vh;
+//   display: flex;
+// }
+
+// .category {
+//   position: absolute;
+//   z-index: 1;
+// }
+
+// .content {
+//   padding: 10px;
+//   overflow: hidden;
+// }
+
+// .img-container {
+//   overflow: hidden;
+//   position: relative;
+//   height: 100%;
+// }
+
+// .img-container img {
+//   width: 100%;
+//   object-fit: cover;
+//   height: 100%;
+//   border-radius: 15px 0 0 15px;
+// }
+
+
+.card {
+  border: 1px solid #d7dbe758;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0px 4px 5px #38426909;
+  height: 20vh;
+  display: flex;
+  overflow: hidden; // Hide content that overflows horizontally
+}
+
+.category {
+  position: absolute;
+  z-index: 1;
+}
+
+.content {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.img-container {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.img-container img {
+  width: auto; // Allow the image's natural width to be maintained
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 0 0 15px;
+}
